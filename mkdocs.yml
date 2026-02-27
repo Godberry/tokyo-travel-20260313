@@ -1,0 +1,68 @@
+site_name: 東京行程規劃
+site_dir: site
+
+theme:
+  name: material
+  language: zh-TW
+  # 網站圖示與 Logo
+  icon:
+    logo: material/airplane-takeoff
+  favicon: assets/favicon.png # 如果有真實的 favicon 這裡可以改，沒有這行也沒關係，它會預設使用 material 的
+  # 更換字體，使用 Google Fonts 的 Noto Sans TC
+  font:
+    text: Noto Sans TC
+    code: Fira Code
+  # 調色盤：加入深淺色模式切換
+  palette:
+    # 淺色模式
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: deep purple
+      toggle:
+        icon: material/weather-night
+        name: 切換到深色模式
+    # 深色模式
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: deep purple
+      toggle:
+        icon: material/weather-sunny
+        name: 切換到淺色模式
+  # 啟用更多 UI 功能
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.top
+    - navigation.tracking
+    - navigation.sections
+    - navigation.expand
+    - toc.integrate
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.code.copy
+    - content.code.annotate
+
+plugins:
+  - search
+  - roamlinks
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.magiclink
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.tabbed:
+      alternate_style: true
+  - toc:
+      permalink: true

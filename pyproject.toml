@@ -1,0 +1,11 @@
+[project]
+name = "tokyo-travel-plan"
+version = "0.1.0"
+description = "Deploy Tokyo travel markdown notes to mkdocs"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "mkdocs",
+    "mkdocs-material",
+    "mkdocs-roamlinks-plugin",
+]
