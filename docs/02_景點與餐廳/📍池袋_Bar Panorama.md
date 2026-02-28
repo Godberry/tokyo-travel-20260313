@@ -7,7 +7,7 @@ tags: [池袋, 晚餐, 酒吧, 夜景, 多人聚餐]
 ## 📌 基本資訊
 - **地點名稱**：Bar Panorama (位在電影院 12F)
 - **地址**：東京都豐島區東池袋 1-30-3 (Grand Cinema Sunshine 12F)
-- **Google Maps**：[Grand Cinema Sunshine (點擊導航)](https://maps.app.goo.gl/xxx)
+- **Google Maps**：[Grand Cinema Sunshine (點擊導航)](https://maps.app.goo.gl/rJgpphoUfdMTGyYN8)
 - **營業時間**：依電影院營業時間 (通常至深夜，需確認 Last Order 時間)
 - **建議停留時間**：1.5 - 2 小時
 - **預約**：強烈建議 (可透過 Tabelog 或店家官網，確認可容納 6 人的座位)
