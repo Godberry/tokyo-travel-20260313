@@ -1,23 +1,36 @@
-name: Deploy MkDocs
+name: Deploy Next.js to GitHub Pages
+
 on:
   push:
     branches:
       - main
       - master
+
 permissions:
   contents: write
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - name: Install uv
-        uses: astral-sh/setup-uv@v5
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
-          enable-cache: true
-      - name: Set up Python
-        run: uv python install
+          node-version: '20'
+          cache: 'npm'
+
       - name: Install dependencies
-        run: uv sync
-      - name: Build and deploy MkDocs
-        run: uv run mkdocs gh-deploy --force
+        run: npm ci
+
+      - name: Build Next.js application
+        run: npm run build
+
+      - name: Deploy to gh-pages branch
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./out
+          publish_branch: gh-pages
