@@ -33,11 +33,11 @@ export default function ChecklistPage() {
         console.error('Failed to parse checklist state', e);
       }
     } else {
-      // Initialize with defaultChecked values
+      // Initialize with all items unchecked
       const initial: Record<string, boolean> = {};
       checklistData.forEach(cat => {
         cat.items.forEach(item => {
-          initial[`${cat.name}-${item.id}`] = item.defaultChecked;
+          initial[`${cat.name}-${item.id}`] = false;
         });
       });
       setCheckedItems(initial);

@@ -47,7 +47,9 @@ export default function RootLayout({
               </Link>
             ))}
             <span className="text-secondary hidden sm:inline">|</span>
-            <div className="flex gap-4 font-vt323 text-base">
+            <div className="flex gap-4 font-vt323 text-base flex-wrap justify-center">
+              <Link href="/spots" className="hover:text-accent-pink hover:-translate-y-1 transition-transform duration-200">景點&餐廳</Link>
+              <Link href="/transport" className="hover:text-accent-pink hover:-translate-y-1 transition-transform duration-200">交通指南</Link>
               <Link href="/preparation/checklist" className="hover:text-accent-pink hover:-translate-y-1 transition-transform duration-200">裝備清單</Link>
               <Link href="/preparation/accommodation" className="hover:text-accent-pink hover:-translate-y-1 transition-transform duration-200">旅館據點</Link>
               <Link href="/preparation/flight" className="hover:text-accent-pink hover:-translate-y-1 transition-transform duration-200">飛行船</Link>
